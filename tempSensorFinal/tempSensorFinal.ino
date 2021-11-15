@@ -36,8 +36,8 @@ const int DIODEpin = A0;
 const int LM35pin = A1;
 const float V_ref = 3.2979;
 const float dvdt = 0.01;
-const float c = 2.758164927;          // Y intercept voltage-- voltage for Zero degrees 'C'
-const float  m = -0.014873019;        // m of the line voltage v temp--ie senstivity 'M'
+const float c = 2.72399;              // Y intercept voltage-- voltage for Zero degrees 'C'
+const float  m = -0.010265734265734;  // m of the line voltage v temp--ie senstivity 'M'
 
 unsigned long previousMillis = 0;
 const long logInterval = 1000;
