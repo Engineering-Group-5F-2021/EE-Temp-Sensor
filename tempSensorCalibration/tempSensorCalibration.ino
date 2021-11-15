@@ -24,20 +24,20 @@
 #include <SPI.h>
 #include <SD.h>
 
-Adafruit_7segment matrix = Adafruit_7segment();  //new Matrix object.
+Adafruit_7segment matrix = Adafruit_7segment();  // New Matrix object.
 RTC_PCF8523 rtc;
 
 int buttonPin = 8;
 int clearLed = 9;
 
-const int chipSelect = 10;            //SD Shield
+const int chipSelect = 10;            // SD Shield
 const unsigned int NUM_AVG = 100;
 const int DIODEpin = A0;
 const int LM35pin = A1;
 const float V_ref = 3.2979;
 const float dvdt = 0.01;
-const float c = 2.758164927;    //Y intercept voltage-- voltage for Zero degrees 'C'
-const float  m = -0.014873019;            //m of the line voltage v temp--ie senstivity 'M'
+const float c = 2.758164927;          // Y intercept voltage-- voltage for Zero degrees 'C'
+const float  m = -0.014873019;        // m of the line voltage v temp--ie senstivity 'M'
 
 unsigned long previousMillis = 0;
 const long logInterval = 1000;
@@ -109,7 +109,6 @@ void loop() {
   float diodeTemperature = (diodeVoltage - c) / m;
 
   float referenceTemperature = get_reading_v(LM35pin) / dvdt;
-
 
   matrix.print(diodeTemperature, 1);  //Send diode sensor value to display
   matrix.writeDisplay();
