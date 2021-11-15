@@ -1,6 +1,6 @@
 /*
   SD card datalogger
-  This example shows how to log data from an analog sensors
+  This project logs data from an analog sensor
   to an SD card using the SD library.
   The circuit:
  ** analog sensors on analog ins 0, 1, and 2
@@ -9,12 +9,6 @@
  ** MISO - pin 12
  ** CLK - pin 13
  ** CS - pin 4 (for MKRZero SD: SDCARD_SS_PIN)
-
-  created  24 Nov 2010
-  modified 9 Apr 2012
-  by Tom Igoe Revised S hunt Nov 2021
-
-  This example code is in the public domain.
 */
 
 #include "RTClib.h" //Library Real Time Clock
