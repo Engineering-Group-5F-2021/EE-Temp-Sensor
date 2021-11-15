@@ -79,7 +79,7 @@ void setup() {
     // don't do anything more:
     while (1);
   }
-  Serial.println("card initialized.");
+  Serial.println("SD Card initialized.");
 
   if (digitalRead(buttonPin) == LOW)
   {
@@ -148,10 +148,10 @@ void loop() {
     dataString += String(" ");
     dataString += String(" ");
 
-    dataString += String("-  Diode Temp -   ");
+    dataString += String(" -  Diode Temp  -   ");
     dataString += String(diodeTemperature, 2);
 
-    dataString += String(" -   Diode Voltage  -   ");
+    dataString += String(" -  Diode Voltage  -   ");
     dataString += String(diodeVoltage, 6);
 
     dataString += String(" -  Reference Temp  -   ");
@@ -173,7 +173,7 @@ void loop() {
     }
     // if the file isn't open, pop up an error:
     else {
-      Serial.println("error opening datalog.txt");
+      Serial.println("Error opening datalog.txt");
     }
 
   }
