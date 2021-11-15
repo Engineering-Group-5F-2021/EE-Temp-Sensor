@@ -11,6 +11,10 @@
  ** CS - pin 4 (for MKRZero SD: SDCARD_SS_PIN)
 */
 
+/*
+ Use local libraries from 'src' folder to make
+ it easier to compile across different workspacesm
+*/
 #include "src/RTClib/RTClib.h" //Library Real Time Clock
 #include <Wire.h> // Used for I2C implementation
 #include "src/Adafruit_GFX_Library/Adafruit_GFX.h"
