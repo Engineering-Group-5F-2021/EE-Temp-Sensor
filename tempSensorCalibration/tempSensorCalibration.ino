@@ -13,8 +13,8 @@
 
 #include "src/RTClib/RTClib.h" //Library Real Time Clock
 #include <Wire.h> // Used for I2C implementation
-#include <Adafruit_GFX.h>
-#include "Adafruit_LEDBackpack.h"
+#include "src/Adafruit_GFX_Library/Adafruit_GFX.h"
+#include "src/Adafruit_LED_Backpack_Library/Adafruit_LEDBackpack.h"
 #include <SPI.h>
 #include <SD.h>
 
