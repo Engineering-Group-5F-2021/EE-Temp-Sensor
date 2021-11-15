@@ -29,6 +29,8 @@ RTC_PCF8523 rtc;
 
 int buttonPin = 8;
 int clearLed = 9;
+int dataRate = 9600;                  // Data rate in bits per second for serial data transmission
+float voltRatio = 1023.0;             // Voltage ratio to devide by, used in 'convertToVolts' function
 
 const int chipSelect = 10;            // SD Shield
 const unsigned int NUM_AVG = 100;
@@ -45,14 +47,14 @@ const long logInterval = 1000;
 void setup() {
 
   // Open serial communications and wait for port to open:
-  Serial.begin(9600);
+  Serial.begin(dataRate);
   analogReference(EXTERNAL);
 
   pinMode(buttonPin, INPUT_PULLUP);
   pinMode(clearLed, OUTPUT);
 
 #ifndef __AVR_ATtiny85__
-  Serial.begin(9600);
+  Serial.begin(dataRate);
   Serial.println("7 Segment Backpack Test");
 
 #endif
@@ -179,6 +181,7 @@ void loop() {
   }
   //delay(1000);  //Set the display interval units ms
 }
+
 float average_reading(int pin) {
   unsigned long average = 0;
   for (int i = 0; i < NUM_AVG; i++) {
@@ -187,9 +190,11 @@ float average_reading(int pin) {
   }
   return ((float)average) / NUM_AVG;
 }
+
 float convertToVolts(float reading) {
-  return reading / 1023.0 * V_ref;
+  return reading / voltRatio * V_ref;
 }
+
 float get_reading_v(int pin) {
   return convertToVolts(average_reading(pin));
 }
