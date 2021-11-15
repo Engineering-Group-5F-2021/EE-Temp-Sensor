@@ -1,0 +1,3 @@
+Best fitting line is about...
+
+f(x) = 2.72399 - 0.0121896x
