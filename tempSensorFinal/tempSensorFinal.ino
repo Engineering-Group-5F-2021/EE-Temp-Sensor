@@ -13,7 +13,7 @@
 
 /*
  Use local libraries from 'src' folder to make
- it easier to compile across different workspacesm
+ it easier to compile across different workspaces.
 */
 #include "src/RTClib/RTClib.h" //Library Real Time Clock
 #include <Wire.h> // Used for I2C implementation
