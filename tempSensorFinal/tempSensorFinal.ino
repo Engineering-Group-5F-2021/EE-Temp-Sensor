@@ -38,8 +38,8 @@ const float V_ref = 3.2979;
 const float dvdt = 0.01;
 
 // These must be improved in terms of accuracy.
-const float c = 2.72399;              // Y intercept voltage-- voltage for Zero degrees 'C'
-const float  m = -0.010265734265734;  // m of the line voltage v temp--ie senstivity 'M'
+const float c = 2.8285649;            // Y intercept voltage-- voltage for Zero degrees 'C'
+const float  m = -0.01184824;         // m of the line voltage v temp--ie senstivity 'M'
 
 unsigned long previousMillis = 0;
 const long logInterval = 1000;
