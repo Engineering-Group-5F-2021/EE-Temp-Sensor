@@ -36,7 +36,7 @@
  */
 
 #include "Adafruit_LEDBackpack.h"
-#include "Adafruit_GFX.h"
+#include "../Adafruit_GFX_Library/Adafruit_GFX.h"
 
 #ifndef _BV
 #define _BV(bit) (1 << (bit)) ///< Bit-value if not defined by Arduino
