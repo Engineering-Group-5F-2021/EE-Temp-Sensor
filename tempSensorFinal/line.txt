@@ -9,3 +9,10 @@ Slope of Line = -0.010265734265734
 1 Degree C is about 10mV
 
 Display should be A2-A5
+
+0.01765
+
+
+2.8109149
+
+2.79302018
